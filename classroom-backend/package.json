@@ -20,6 +20,7 @@
     "express-session": "^1.17.1",
     "mongoose": "^5.9.9",
     "nodemon": "^2.0.3",
-    "parser": "^0.1.4"
+    "parser": "^0.1.4",
+    "twilio-video": "^2.0.0"
   }
 }
