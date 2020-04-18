@@ -8,6 +8,7 @@ const MongoURI = process.env.MONGODB_URI || `mongodb://localhost/${dbName}`
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
+const RoomApi = require('./routes/Room.routes');
 
 app.use(cookieParser());
 app.use(cors());
@@ -24,6 +25,8 @@ db.once('open', function() {
     //we're connected!
     console.log("Mongoose online")
          });
+
+         app.use('/rooms', RoomApi);
 
 
 const port = process.env.PORT || 4000;
